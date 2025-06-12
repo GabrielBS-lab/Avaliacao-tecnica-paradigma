@@ -25,12 +25,9 @@ class ArvoreBinaria
         int raizIndex = Array.IndexOf(array, maxValor);
         var raiz = new Node(maxValor);
 
-        // Galhos da esquerda: elementos antes da raiz, em ordem decrescente
         var esquerda = array.Take(raizIndex).OrderByDescending(x => x).ToList();
-        // Galhos da direita: elementos após a raiz, em ordem decrescente
         var direita = array.Skip(raizIndex + 1).OrderByDescending(x => x).ToList();
 
-        // Construir galhos da esquerda (em cadeia)
         var atual = raiz;
         foreach (var val in esquerda)
         {
@@ -38,7 +35,6 @@ class ArvoreBinaria
             atual = atual.Esquerda;
         }
 
-        // Construir galhos da direita (em cadeia)
         atual = raiz;
         foreach (var val in direita)
         {
@@ -49,7 +45,6 @@ class ArvoreBinaria
         return raiz;
     }
 
-    // Impressão visual da árvore
     public static void ImprimirArvore(Node node, string prefix = "", bool isLeft = true)
     {
         if (node == null) return;
