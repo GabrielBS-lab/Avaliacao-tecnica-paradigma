@@ -1,7 +1,7 @@
 CREATE TABLE Colaboradores (
     Id_Colaborador INT PRIMARY KEY,
     Nome_Colaborador VARCHAR(50),
-    Salario_Colaborador DECIMAL(10, 2), -- Ajustado para salários com valores quebrados
+    Salario_Colaborador DECIMAL(10, 2),
     Id_Departamento INT
 );
 
@@ -12,9 +12,9 @@ INSERT INTO Colaboradores (Id_Colaborador, Nome_Colaborador, Salario_Colaborador
 (4, 'Márcia Lima', 90000.25, 1),
 (5, 'Carlos Rocha', 75500.80, 1),
 (6, 'Ana Pereira', 82100.90, 2),
-(7, 'Felipe Souza', 68000.10, 3), -- Novo departamento
+(7, 'Felipe Souza', 68000.10, 3),
 (8, 'Beatriz Alves', 95000.00, 1),
-(9, 'Gustavo Martins', 72300.40, 3), -- Novo departamento
+(9, 'Gustavo Martins', 72300.40, 3),
 (10, 'Julia Fernandes', 88900.60, 2);
 
 
@@ -26,7 +26,7 @@ CREATE TABLE Departamentos (
 INSERT INTO Departamentos (Id_Departamento, Nome_Departamento) VALUES
 (1, 'TI'),
 (2, 'Vendas'),
-(3, 'Marketing'); -- Novo departamento
+(3, 'Marketing');
 
 
 WITH Salarios_Com_Classificacao AS (
